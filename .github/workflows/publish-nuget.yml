@@ -10,7 +10,5 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v1
-      - name: Publish NuGet
-        run: |
-          dotnet pack -c Release
-          dotnet nuget push *.nupkg
+      - run: dotnet pack -c Release
+      - run: dotnet nuget push *.nupkg -Source "https://nuget.pkg.github.com/MarcinWorkDev/index.json"
