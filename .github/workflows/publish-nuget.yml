@@ -15,4 +15,4 @@ jobs:
         with:
           token: ${{secrets.github_token}}
       - run: dotnet pack -c Release --version-suffix "$BUILD_NUMBER"
-      - run: dotnet nuget push **/*.nupkg -k "${{secrets.GITHUB_PACKAGES_API_KEY}}" -s "https://nuget.pkg.github.com/MarcinWorkDev/index.json"
+      - run: nuget push **/*.nupkg -k "${{secrets.GITHUB_PACKAGES_API_KEY}}" -s "https://nuget.pkg.github.com/MarcinWorkDev/index.json"
