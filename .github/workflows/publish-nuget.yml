@@ -2,14 +2,14 @@ name: CI
 
 on:
   push:
-    branches: [release]
+    branches:
+      - master
 
 jobs:
   publish-nuget:
     runs-on: ubuntu-latest
     steps:
-      - run: ls
-        
+      - uses: actions/checkout@v1
       - name: Publish NuGet
         run: |
           dotnet pack -c Release
