@@ -11,9 +11,6 @@ jobs:
 
     steps:
     - name: Publish NuGet
-      uses: rohith/publish-nuget@v2.0.0
-      with:
-        # Filepath of the project to be packaged, relative to root of repository
-        PROJECT_FILE_PATH: MWork.Common.Sdk
-        # Regex (with version in a capturing group) to extract the version from `VERSION_FILE_PATH`
-        #VERSION_REGEX: # optional, default is <Version>(.*)<\/Version>
+      run: |
+        dotnet pack -c Release
+        dotnet nuget push *.nupkg
