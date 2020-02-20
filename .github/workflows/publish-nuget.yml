@@ -5,13 +5,11 @@ on:
     branches: [release]
 
 jobs:
-  build:
-
+  publish-nuget:
     runs-on: ubuntu-latest
-
     steps:
-    - name: Publish NuGet
-      run: |
-        ls
-        dotnet pack -c Release
-        dotnet nuget push *.nupkg
+      - run: ls
+      - name: Publish NuGet
+        run: |
+          dotnet pack -c Release
+          dotnet nuget push *.nupkg
