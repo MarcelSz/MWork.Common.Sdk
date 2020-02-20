@@ -12,5 +12,6 @@ jobs:
     steps:
     - name: Publish NuGet
       run: |
+        ls
         dotnet pack -c Release
         dotnet nuget push *.nupkg
