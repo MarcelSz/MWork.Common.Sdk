@@ -10,7 +10,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v1
-      - name: Publish NuGet
-        run: |
-          dotnet pack -c Release
-          dotnet nuget push *.nupkg
+      - name: Generate build number
+        uses: einaregilsson/build-number@v2 
+        with:
+          token: ${{secrets.github_token}}
+      - run: dotnet pack -c Release --version-suffix "$BUILD_NUMBER"
+      - run: dotnet nuget push *.nupkg -s 'https://nuget.pkg.github.com/MarcinWorkDev/index.json' -k '${{ secrets.GITHUB_TOKEN }}'
