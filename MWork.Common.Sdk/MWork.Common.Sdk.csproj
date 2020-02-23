@@ -2,11 +2,11 @@
 
     <PropertyGroup>
         <TargetFramework>netcoreapp3.1</TargetFramework>
-        <PackageVersion>0.1.0</PackageVersion>
         <Title>MWork.Common.Sdk</Title>
         <Authors>MarcinWorkDev</Authors>
         <RepositoryUrl>https://github.com/MarcinWorkDev/MWork.Common.Sdk</RepositoryUrl>
         <RepositoryType>git</RepositoryType>
+        <VersionPrefix>0.1.0</VersionPrefix>
         <VersionSuffix>$(VersionSuffix)</VersionSuffix>
     </PropertyGroup>
 
