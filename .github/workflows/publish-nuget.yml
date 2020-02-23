@@ -18,7 +18,7 @@ jobs:
       - name: Setup .NET Core SDK
         uses: actions/setup-dotnet@v1.4.0
         with:
-          source-url: https://nuget.pkg.github.com/MarcinWorkDev/index.json
+          source-url: https://nuget.pkg.github.com/MarcinWorkDev
         env:
           NUGET_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
-      - run: dotnet nuget push **/.nupkg
+      - run: dotnet nuget push **/*.nupkg
