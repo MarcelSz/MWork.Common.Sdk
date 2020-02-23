@@ -6,6 +6,20 @@
     <e p="F:\repos\rider\MWork.Common.Sdk" t="IncludeFlat">
       <e p="MWork.Common.Sdk" t="IncludeRecursive">
         <e p="bin" t="ExcludeRecursive" />
+        <e p="CQRS" t="Include">
+          <e p="IBusMediator.cs" t="Include" />
+          <e p="IBusPublisher.cs" t="Include" />
+          <e p="ICommand.cs" t="Include" />
+          <e p="ICommandBus.cs" t="Include" />
+          <e p="ICommandHandler.cs" t="Include" />
+          <e p="ICorrelationContext.cs" t="Include" />
+          <e p="IEvent.cs" t="Include" />
+          <e p="IEventBus.cs" t="Include" />
+          <e p="IEventHandler.cs" t="Include" />
+          <e p="IQuery.cs" t="Include" />
+          <e p="IQueryBus.cs" t="Include" />
+          <e p="IQueryHandler.cs" t="Include" />
+        </e>
         <e p="Extensions" t="Include">
           <e p="ExceptionExtensions.cs" t="Include" />
           <e p="StringExtensions.cs" t="Include" />
@@ -21,6 +35,14 @@
             <e p="netcoreapp3.1" t="Include">
               <e p="MWork.Common.Sdk.AssemblyInfo.cs" t="Include" />
             </e>
+          </e>
+        </e>
+        <e p="Repositories" t="Include">
+          <e p="IDataRepository.cs" t="Include" />
+          <e p="Types" t="Include">
+            <e p="IWithCreatedMetadata.cs" t="Include" />
+            <e p="IWithId.cs" t="Include" />
+            <e p="IWithModifiedMetadata.cs" t="Include" />
           </e>
         </e>
       </e>
